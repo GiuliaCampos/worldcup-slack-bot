@@ -151,14 +151,14 @@ function getUrl($url, $doNotUseEtag = false)
         CURLOPT_RETURNTRANSFER => 1,
         CURLOPT_FOLLOWLOCATION => 1,
         CURLOPT_SSL_VERIFYPEER => false,
-        CURLOPT_HTTPHEADER => ['Authorization: Bearer xoxb-6173064323-4386306105428-RJN5TRW3fAGkOvBBWR79LqPY',]
+        CURLOPT_HTTPHEADER => ['Authorization: Bearer xoxb-6173064323-4386306105428-Ra77ykPksx8WiTxF3yl8WF1B',]
     );
 
     if (!$doNotUseEtag && isset($db['etag']) && array_key_exists($url, $db['etag']))
     {
         $options[CURLOPT_HTTPHEADER] = [
             'If-None-Match: "'.$db['etag'][$url].'"',
-            'Authorization: Bearer xoxb-6173064323-4386306105428-RJN5TRW3fAGkOvBBWR79LqPY',
+            'Authorization: Bearer xoxb-6173064323-4386306105428-Ra77ykPksx8WiTxF3yl8WF1B',
         ];
     }
 
